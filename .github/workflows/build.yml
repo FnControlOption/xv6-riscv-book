@@ -19,6 +19,13 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
 
+      - name: Install mpage
+        run: |
+          wget https://www.mesa.nl/pub/mpage/mpage-2.5.8.tgz
+          tar -xvzf mpage-*.tgz
+          make -C mpage-*/
+          sudo make -C mpage-*/ install
+
       - name: Checkout
         uses: actions/checkout@v4
 
