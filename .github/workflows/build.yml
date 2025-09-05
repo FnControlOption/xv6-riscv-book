@@ -33,6 +33,7 @@ jobs:
         run: |
           export DEBIAN_FRONTEND=noninteractive
           sudo apt-get -qq update > /dev/null
+          sudo apt-get -qq install gnuplot > /dev/null
           sudo apt-get -qq install ghostscript make latexmk dvisvgm preview-latex-style texlive-extra-utils zip latexml > /dev/null
           sudo apt-get -qq install texlive-latex-base > /dev/null
           sudo apt-get -qq install texlive-latex-extra > /dev/null
